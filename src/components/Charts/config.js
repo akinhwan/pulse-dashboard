@@ -6,6 +6,95 @@ export const basicOptions = {
   },
   responsive: true,
 };
+
+// function randomScalingFactor() {
+// 	return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
+// }
+
+// function onRefresh(chart) {
+//   console.log('onRefresh', chart)
+//   chart.config.data.datasets.forEach(function(dataset) {
+//     dataset.data.push({
+//       x: Date.now(),
+//       y: randomScalingFactor()
+//     });
+//   });
+// }
+
+export let bigLineChartOptions = {
+  ...basicOptions,
+  tooltips: {
+    backgroundColor: '#f5f5f5',
+    titleFontColor: '#333',
+    bodyFontColor: '#666',
+    bodySpacing: 4,
+    xPadding: 12,
+    mode: "nearest",
+    intersect: 0,
+    position: "nearest"
+  },
+  scales: {
+    xAxes: [{
+      type: 'realtime',
+      realtime: {
+        duration: 20000,
+        ttl: 60000,
+        refresh: 1000,
+        delay: 2000,
+        pause: false,
+        onRefresh: function onRefresh(chart) {
+          console.log('onRefresh', chart)
+          chart.config.data.datasets.forEach(function(dataset) {
+            dataset.data.push({
+              x: Date.now(),
+              y: (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100)
+            });
+          });
+        }
+      },
+      barPercentage: 1.6,
+      gridLines: {
+        drawBorder: false,
+        color: 'rgba(225,78,202,0.1)',
+        zeroLineColor: "transparent",
+      },
+      ticks: {
+        padding: 20,
+        fontColor: "#9a9a9a"
+      }
+    }],
+    yAxes: [{
+      type: 'linear',
+      display: true,
+      scaleLabel: {
+        display: true,
+        labelString: 'value'
+      },
+      barPercentage: 1.6,
+      gridLines: {
+        drawBorder: false,
+        color: 'rgba(29,140,248,0.0)',
+        zeroLineColor: "transparent",
+      },
+      ticks: {
+        suggestedMin: 60,
+        suggestedMax: 125,
+        padding: 20,
+        fontColor: "#9a9a9a"
+      }
+    }]
+  },
+  hover: {
+    mode: 'nearest',
+    intersect: false
+  },
+  plugins: {
+    streaming: {
+      frameRate: 30
+    }
+  }
+}
+
 export let blueChartOptions = {
   ...basicOptions,
   tooltips: {

@@ -18,7 +18,8 @@
 }
 .sidebar,
 .off-canvas-sidebar{
-    @include linear-gradient($primary-states, $primary);
+    // @include linear-gradient($primary-states, $primary);
+    background: linear-gradient($card-black-background, $background-black);
     height: calc(100vh - 90px);
     width: 230px;
     position: fixed;
@@ -292,10 +293,9 @@
           margin-left: 0;
           margin-right: 15px;
           background: #fff;
-          border-radius: 32px;
           text-align: center;
           img {
-            max-width: 21px;
+            max-width: 100%;
           }
           &.logo-img-rtl {
             margin-right: 0;
@@ -306,6 +306,7 @@
             display: block;
             opacity: 1;
             @include transform-translate-x(0px);
+            font-size: 2rem;
         }
 
         &:after{

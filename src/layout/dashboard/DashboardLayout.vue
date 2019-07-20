@@ -6,6 +6,7 @@
         <sidebar-link to="/notifications" :name="$t('sidebar.notifications')" icon="tim-icons icon-bell-55"/>
         <sidebar-link to="/profile" :name="$t('sidebar.customize')" icon="tim-icons icon-pencil"/>
         <sidebar-link to="/table-list" :name="$t('sidebar.tableList')" icon="tim-icons icon-puzzle-10"/>
+        <sidebar-link to="/typography" :name="$t('sidebar.reportGen')" icon="tim-icons icon-paper"/>
       </template>
     </side-bar>
     <div class="main-panel">

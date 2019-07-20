@@ -24,7 +24,7 @@ export let bigLineChartOptions = {
       realtime: {
         duration: 20000,
         ttl: 60000,
-        refresh: 5000,
+        refresh: 1000,
         delay: 0,
         pause: false,
         onRefresh: function onRefresh(chart) {

@@ -5,7 +5,7 @@
     "pie": "Insurance Type",
     "polar": "Total Admissions by Divison",
     "radar": "HACs",
-    "scatter": "scatter",
+    "scatter": "Overall Rating",
     "completedTasks": "Completed Tasks",
     "dailySales": "Daily Sales",
     "performance": "Patient Care",
@@ -165,6 +165,7 @@
     "dashboard": "dashboard",
     "notifications": "Notifications",
     "customize": "Customize",
-    "tableList": "Staff"
+    "tableList": "Staff",
+    "reportGen": "Generate Report"
   }
 }

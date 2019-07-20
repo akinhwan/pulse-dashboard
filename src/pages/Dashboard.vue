@@ -43,26 +43,11 @@
         </card>
       </div>
     </div>
+
+    <!-- OTHER CHARTS -->
     <div class="row">
       <div class="col-lg-4" :class="{'text-right': isRTL}">
-        <card type="chart">
-          <template slot="header">
-            <h5 class="card-category">{{$t('dashboard.totalShipments')}}</h5>
-            <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>
-          </template>
-          <div class="chart-area">
-            <line-chart style="height: 100%"
-                        chart-id="purple-line-chart"
-                        :chart-data="purpleLineChart.chartData"
-                        :gradient-colors="purpleLineChart.gradientColors"
-                        :gradient-stops="purpleLineChart.gradientStops"
-                        :extra-options="purpleLineChart.extraOptions">
-            </line-chart>
-          </div>
-        </card>
-      </div>
-      <div class="col-lg-4" :class="{'text-right': isRTL}">
-        <card type="chart">
+        <card type="chart" class="taller-cards">
           <template slot="header">
             <h5 class="card-category">{{$t('dashboard.dailySales')}}</h5>
             <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info "></i> 3,500€</h3>
@@ -78,28 +63,7 @@
         </card>
       </div>
       <div class="col-lg-4" :class="{'text-right': isRTL}">
-        <card type="chart">
-          <template slot="header">
-            <h5 class="card-category">{{$t('dashboard.completedTasks')}}</h5>
-            <h3 class="card-title"><i class="tim-icons icon-send text-success "></i> 12,100K</h3>
-          </template>
-          <div class="chart-area">
-            <line-chart style="height: 100%"
-                        chart-id="green-line-chart"
-                        :chart-data="greenLineChart.chartData"
-                        :gradient-stops="greenLineChart.gradientStops"
-                        :extra-options="greenLineChart.extraOptions">
-            </line-chart>
-          </div>
-        </card>
-      </div>
-    </div>
-
-
-    <!-- OTHER CHARTS -->
-    <div class="row">
-      <div class="col-lg-4" :class="{'text-right': isRTL}">
-        <card type="chart">
+        <card type="chart" class="taller-cards">
           <template slot="header">
             <h5 class="card-category">{{$t('dashboard.radar')}}</h5>
             <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>
@@ -116,7 +80,7 @@
         </card>
       </div>
       <div class="col-lg-4" :class="{'text-right': isRTL}">
-        <card type="chart">
+        <card type="chart" class="taller-cards">
           <template slot="header">
             <h5 class="card-category">{{$t('dashboard.polar')}}</h5>
             <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info "></i> 3,500€</h3>
@@ -131,8 +95,8 @@
           </div>
         </card>
       </div>
-      <div class="col-lg-4" :class="{'text-right': isRTL}">
-        <card type="chart">
+      <!-- <div class="col-lg-4" :class="{'text-right': isRTL}">
+        <card type="chart" class="taller-cards">
           <template slot="header">
             <h5 class="card-category">{{$t('dashboard.scatter')}}</h5>
             <h3 class="card-title"><i class="tim-icons icon-send text-success "></i> 12,100K</h3>
@@ -146,7 +110,7 @@
             </scatter-chart>
           </div>
         </card>
-      </div>
+      </div> -->
     </div>
 
 
@@ -154,7 +118,23 @@
     <!-- MOOOOORE CHARTS -->
     <div class="row">
       <div class="col-lg-4" :class="{'text-right': isRTL}">
-        <card type="chart">
+        <card type="chart" class="taller-cards">
+          <template slot="header">
+            <h5 class="card-category">{{$t('dashboard.doughnut')}}</h5>
+            <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info "></i> 3,500€</h3>
+          </template>
+          <div class="chart-area">
+            <doughnut-chart style="height: 100%"
+                       chart-id="some-doughnut-chart"
+                       :chart-data="someDoughnutChart.chartData"
+                       :gradient-stops="someDoughnutChart.gradientStops"
+                       :extra-options="someDoughnutChart.extraOptions">
+            </doughnut-chart>
+          </div>
+        </card>
+      </div>
+      <div class="col-lg-4" :class="{'text-right': isRTL}">
+        <card type="chart" class="taller-cards">
           <template slot="header">
             <h5 class="card-category">{{$t('dashboard.bubble')}}</h5>
             <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>
@@ -171,23 +151,7 @@
         </card>
       </div>
       <div class="col-lg-4" :class="{'text-right': isRTL}">
-        <card type="chart">
-          <template slot="header">
-            <h5 class="card-category">{{$t('dashboard.doughnut')}}</h5>
-            <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info "></i> 3,500€</h3>
-          </template>
-          <div class="chart-area">
-            <doughnut-chart style="height: 100%"
-                       chart-id="some-doughnut-chart"
-                       :chart-data="someDoughnutChart.chartData"
-                       :gradient-stops="someDoughnutChart.gradientStops"
-                       :extra-options="someDoughnutChart.extraOptions">
-            </doughnut-chart>
-          </div>
-        </card>
-      </div>
-      <div class="col-lg-4" :class="{'text-right': isRTL}">
-        <card type="chart">
+        <card type="chart" class="taller-cards">
           <template slot="header">
             <h5 class="card-category">{{$t('dashboard.pie')}}</h5>
             <h3 class="card-title"><i class="tim-icons icon-send text-success "></i> 12,100K</h3>
@@ -423,21 +387,53 @@
           chartData: {
             labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
             datasets: [{
-              label: "Countries",
+              label: "Patient Staff Ratio",
               fill: true,
-              borderColor: config.colors.info,
-              borderWidth: 2,
-              borderDash: [],
+              borderColor: '#11cdef',
               borderDashOffset: 0.0,
-              data: [{
-                  x: 10,
+              data: [
+                {
+                  x: 20,
                   y: 20,
-                  r: 30,
-              }, {
-                  x: 15,
-                  y: 10,
-                  r: 50
-              }]
+                  r: 10,
+                }, {
+                    x: 2,
+                    y: 11,
+                    r: 10
+                }, {
+                    x: 19,
+                    y: 19,
+                    r: 2
+                }, {
+                    x: 17,
+                    y: 16,
+                    r: 4
+                }, {
+                    x: 15,
+                    y: 14,
+                    r: 2
+                }, {
+                    x: 9,
+                    y: 7,
+                    r: 6
+                }, {
+                    x: 13,
+                    y: 13,
+                    r: 5
+                }, {
+                    x: 11,
+                    y: 11,
+                    r: 5
+                }, {
+                    x: 8,
+                    y: 8,
+                    r: 5
+                }, {
+                    x: 4,
+                    y: 4,
+                    r: 19
+                }
+              ]
             }]
           },
           gradientColors: config.colors.primaryGradient,
@@ -446,15 +442,26 @@
         someDoughnutChart: {
           // extraOptions: chartConfigs.barChartOptions,
           chartData: {
-            labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
+            labels: ['Very Unsatisfied', 'Unsatisfied', 'Neutral', 'Satisfied', 'Very Satisfied'],
             datasets: [{
-              label: "Countries",
+              label: "Patient Satisfaction",
               fill: true,
-              borderColor: config.colors.info,
+              borderColor: [
+                '#f5365c',
+                // '#fb6340',
+                '#ffd600',
+                '#2dce89',
+                '#5e72e4',
+                // '#8965e0',
+                // '#5603ad',
+                '#f3a4b5',
+                // '#11cdef',
+                // '#2bffc6'
+                ],
               borderWidth: 2,
               borderDash: [],
               borderDashOffset: 0.0,
-              data: [53, 20, 10, 80, 100, 45],
+              data: [1, 9, 36, 44, 10],
             }]
           },
           gradientColors: config.colors.primaryGradient,
@@ -463,11 +470,22 @@
         somePieChart: {
           // extraOptions: chartConfigs.barChartOptions,
           chartData: {
-            labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
+            labels: ['Humana', 'Kaiser', 'BlueCross', 'Aetna', 'Medicare', 'Medicaid'],
             datasets: [{
-              label: "Countries",
+              label: "Insurance Provider",
               fill: true,
-              borderColor: config.colors.info,
+              borderColor: [
+                '#f5365c',
+                // '#fb6340',
+                '#ffd600',
+                // '#2dce89',
+                '#5e72e4',
+                '#8965e0',
+                // '#5603ad',
+                '#f3a4b5',
+                // '#11cdef',
+                '#2bffc6'
+                ],
               borderWidth: 2,
               borderDash: [],
               borderDashOffset: 0.0,
@@ -480,15 +498,32 @@
         somePolarChart: {
           // extraOptions: chartConfigs.barChartOptions,
           chartData: {
-            labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
+            labels: [
+              "MICU",
+              "SICU",
+              "CICU",
+              "Neuro/Medical",
+              "Ortho/Surgical",
+              "Rehab",
+              "PCU"
+            ],
             datasets: [{
               label: "Countries",
               fill: true,
-              borderColor: config.colors.info,
+              borderColor: [
+                '#f5365c',
+                // '#fb6340',
+                '#ffd600',
+                '#2dce89',
+                '#5e72e4',
+                // '#8965e0',
+                '#5603ad',
+                '#f3a4b5',
+                // '#11cdef',
+                '#2bffc6'
+                ],
               borderWidth: 2,
-              borderDash: [],
-              borderDashOffset: 0.0,
-              data: [53, 20, 10, 80, 100, 45],
+              data: [53, 20, 10, 80, 100, 45, 110],
             }]
           },
           gradientColors: config.colors.primaryGradient,
@@ -499,19 +534,57 @@
           chartData: {
             labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
             datasets: [{
-              label: "Countries",
+              label: "Overall Rating",
               fill: true,
               borderColor: config.colors.info,
               borderWidth: 2,
               borderDash: [],
               borderDashOffset: 0.0,
-              data: [{
+              data: [
+                {
                   x: 10,
                   y: 20
-              }, {
-                  x: 15,
-                  y: 10
-              }]
+                }, {
+                    x: 15,
+                    y: 10
+                },
+                {
+                    x: 12,
+                    y: 13
+                },
+                {
+                    x: 25,
+                    y: 16
+                },
+                {
+                    x: 18,
+                    y: 9
+                },
+                {
+                    x: 12,
+                    y: 18
+                },
+                {
+                    x: 19,
+                    y: 20
+                },
+                {
+                    x: 35,
+                    y: 30
+                },
+                {
+                    x: 45,
+                    y: 40
+                },
+                {
+                    x: 55,
+                    y: 50
+                },
+                {
+                    x: 65,
+                    y: 60
+                },
+              ]
             }]
           },
           gradientColors: config.colors.primaryGradient,

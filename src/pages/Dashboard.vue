@@ -94,6 +94,117 @@
         </card>
       </div>
     </div>
+
+
+    <!-- OTHER CHARTS -->
+    <div class="row">
+      <div class="col-lg-4" :class="{'text-right': isRTL}">
+        <card type="chart">
+          <template slot="header">
+            <h5 class="card-category">{{$t('dashboard.radar')}}</h5>
+            <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>
+          </template>
+          <div class="chart-area">
+            <radar-chart style="height: 100%"
+                        chart-id="some-radar-chart"
+                        :chart-data="someRadarChart.chartData"
+                        :gradient-colors="someRadarChart.gradientColors"
+                        :gradient-stops="someRadarChart.gradientStops"
+                        :extra-options="someRadarChart.extraOptions">
+            </radar-chart>
+          </div>
+        </card>
+      </div>
+      <div class="col-lg-4" :class="{'text-right': isRTL}">
+        <card type="chart">
+          <template slot="header">
+            <h5 class="card-category">{{$t('dashboard.polar')}}</h5>
+            <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info "></i> 3,500€</h3>
+          </template>
+          <div class="chart-area">
+            <polar-chart style="height: 100%"
+                       chart-id="polar-chart"
+                       :chart-data="somePolarChart.chartData"
+                       :gradient-stops="somePolarChart.gradientStops"
+                       :extra-options="somePolarChart.extraOptions">
+            </polar-chart>
+          </div>
+        </card>
+      </div>
+      <div class="col-lg-4" :class="{'text-right': isRTL}">
+        <card type="chart">
+          <template slot="header">
+            <h5 class="card-category">{{$t('dashboard.scatter')}}</h5>
+            <h3 class="card-title"><i class="tim-icons icon-send text-success "></i> 12,100K</h3>
+          </template>
+          <div class="chart-area">
+            <scatter-chart style="height: 100%"
+                        chart-id="scatter-chart"
+                        :chart-data="someScatterChart.chartData"
+                        :gradient-stops="someScatterChart.gradientStops"
+                        :extra-options="someScatterChart.extraOptions">
+            </scatter-chart>
+          </div>
+        </card>
+      </div>
+    </div>
+
+
+
+    <!-- MOOOOORE CHARTS -->
+    <div class="row">
+      <div class="col-lg-4" :class="{'text-right': isRTL}">
+        <card type="chart">
+          <template slot="header">
+            <h5 class="card-category">{{$t('dashboard.bubble')}}</h5>
+            <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>
+          </template>
+          <div class="chart-area">
+            <bubble-chart style="height: 100%"
+                        chart-id="some-bubble-chart"
+                        :chart-data="someBubbleChart.chartData"
+                        :gradient-colors="someBubbleChart.gradientColors"
+                        :gradient-stops="someBubbleChart.gradientStops"
+                        :extra-options="someBubbleChart.extraOptions">
+            </bubble-chart>
+          </div>
+        </card>
+      </div>
+      <div class="col-lg-4" :class="{'text-right': isRTL}">
+        <card type="chart">
+          <template slot="header">
+            <h5 class="card-category">{{$t('dashboard.doughnut')}}</h5>
+            <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info "></i> 3,500€</h3>
+          </template>
+          <div class="chart-area">
+            <doughnut-chart style="height: 100%"
+                       chart-id="some-doughnut-chart"
+                       :chart-data="someDoughnutChart.chartData"
+                       :gradient-stops="someDoughnutChart.gradientStops"
+                       :extra-options="someDoughnutChart.extraOptions">
+            </doughnut-chart>
+          </div>
+        </card>
+      </div>
+      <div class="col-lg-4" :class="{'text-right': isRTL}">
+        <card type="chart">
+          <template slot="header">
+            <h5 class="card-category">{{$t('dashboard.pie')}}</h5>
+            <h3 class="card-title"><i class="tim-icons icon-send text-success "></i> 12,100K</h3>
+          </template>
+          <div class="chart-area">
+            <pie-chart style="height: 100%"
+                        chart-id="some-pie-chart"
+                        :chart-data="somePieChart.chartData"
+                        :gradient-stops="somePieChart.gradientStops"
+                        :extra-options="somePieChart.extraOptions">
+            </pie-chart>
+          </div>
+        </card>
+      </div>
+    </div>
+
+
     <div class="row">
       <div class="col-lg-6 col-md-12">
         <card type="tasks" :header-classes="{'text-right': isRTL}">
@@ -130,6 +241,12 @@
 <script>
   import LineChart from '@/components/Charts/LineChart';
   import BarChart from '@/components/Charts/BarChart';
+  import RadarChart from '@/components/Charts/RadarChart';
+  import BubbleChart from '@/components/Charts/BubbleChart';
+  import ScatterChart from '@/components/Charts/ScatterChart';
+  import PolarChart from '@/components/Charts/PolarChart';
+  import PieChart from '@/components/Charts/PieChart';
+  import DoughnutChart from '@/components/Charts/DoughnutChart';
   import * as chartConfigs from '@/components/Charts/config';
   import TaskList from './Dashboard/TaskList';
   import UserTable from './Dashboard/UserTable';
@@ -139,6 +256,12 @@
     components: {
       LineChart,
       BarChart,
+      RadarChart,
+      BubbleChart,
+      ScatterChart,
+      PolarChart,
+      PieChart,
+      DoughnutChart,
       TaskList,
       UserTable
     },
@@ -154,25 +277,6 @@
           ],
           activeIndex: 0,
           chartData: null,
-          // chartData: {
-          //   labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
-          //   datasets: [{
-          //     label: "Data",
-          //     fill: true,
-          //     borderColor: config.colors.primary,
-          //     borderWidth: 2,
-          //     borderDash: [],
-          //     borderDashOffset: 0.0,
-          //     pointBackgroundColor: config.colors.primary,
-          //     pointBorderColor: 'rgba(255,255,255,0)',
-          //     pointHoverBackgroundColor: config.colors.primary,
-          //     pointBorderWidth: 20,
-          //     pointHoverRadius: 4,
-          //     pointHoverBorderWidth: 15,
-          //     pointRadius: 4,
-          //     data: [80, 100, 70, 80, 120, 80],
-          //   }]
-          // },
           extraOptions: chartConfigs.bigLineChartOptions,
           gradientColors: config.colors.primaryGradient,
           gradientStops: [1, 0.4, 0],
@@ -226,8 +330,62 @@
           gradientColors: ['rgba(66,134,121,0.15)', 'rgba(66,134,121,0.0)', 'rgba(66,134,121,0)'],
           gradientStops: [1, 0.4, 0],
         },
-        blueBarChart: {
-          extraOptions: chartConfigs.barChartOptions,
+        someRadarChart: {
+          // extraOptions: chartConfigs.purpleChartOptions,
+          chartData: {
+            labels: [ "SSI",
+              "CAUTI",
+              "CLABSI",
+              "PU",
+              "Falls",
+              "Sepsis"
+            ],
+            datasets: [{
+              label: "Data",
+              fill: true,
+              borderColor: config.colors.primary,
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              pointBackgroundColor: config.colors.primary,
+              pointBorderColor: 'rgba(255,255,255,0)',
+              pointHoverBackgroundColor: config.colors.primary,
+              pointBorderWidth: 20,
+              pointHoverRadius: 4,
+              pointHoverBorderWidth: 15,
+              pointRadius: 4,
+              data: [80, 100, 70, 80, 120, 80],
+            }]
+          },
+          gradientColors: config.colors.primaryGradient,
+          gradientStops: [1, 0.2, 0],
+        },
+        greenRadarChart: {
+          // extraOptions: chartConfigs.greenChartOptions,
+          chartData: {
+            labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
+            datasets: [{
+              label: "My First dataset",
+              fill: true,
+              borderColor: config.colors.danger,
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              pointBackgroundColor: config.colors.danger,
+              pointBorderColor: 'rgba(255,255,255,0)',
+              pointHoverBackgroundColor: config.colors.danger,
+              pointBorderWidth: 20,
+              pointHoverRadius: 4,
+              pointHoverBorderWidth: 15,
+              pointRadius: 4,
+              data: [90, 27, 60, 12, 80],
+            }]
+          },
+          gradientColors: ['rgba(66,134,121,0.15)', 'rgba(66,134,121,0.0)', 'rgba(66,134,121,0)'],
+          gradientStops: [1, 0.4, 0],
+        },
+        blueRadarChart: {
+          // extraOptions: chartConfigs.barChartOptions,
           chartData: {
             labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
             datasets: [{
@@ -238,6 +396,122 @@
               borderDash: [],
               borderDashOffset: 0.0,
               data: [53, 20, 10, 80, 100, 45],
+            }]
+          },
+          gradientColors: config.colors.primaryGradient,
+          gradientStops: [1, 0.4, 0],
+        },
+        blueBarChart: {
+          // extraOptions: chartConfigs.barChartOptions,
+          chartData: {
+            labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
+            datasets: [{
+              label: "Countries",
+              fill: true,
+              borderColor: config.colors.info,
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              data: [53, 20, 10, 80, 100, 45],
+            }]
+          },
+          gradientColors: config.colors.primaryGradient,
+          gradientStops: [1, 0.4, 0],
+        },
+        someBubbleChart: {
+          // extraOptions: chartConfigs.barChartOptions,
+          chartData: {
+            labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
+            datasets: [{
+              label: "Countries",
+              fill: true,
+              borderColor: config.colors.info,
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              data: [{
+                  x: 10,
+                  y: 20,
+                  r: 30,
+              }, {
+                  x: 15,
+                  y: 10,
+                  r: 50
+              }]
+            }]
+          },
+          gradientColors: config.colors.primaryGradient,
+          gradientStops: [1, 0.4, 0],
+        },
+        someDoughnutChart: {
+          // extraOptions: chartConfigs.barChartOptions,
+          chartData: {
+            labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
+            datasets: [{
+              label: "Countries",
+              fill: true,
+              borderColor: config.colors.info,
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              data: [53, 20, 10, 80, 100, 45],
+            }]
+          },
+          gradientColors: config.colors.primaryGradient,
+          gradientStops: [1, 0.4, 0],
+        },
+        somePieChart: {
+          // extraOptions: chartConfigs.barChartOptions,
+          chartData: {
+            labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
+            datasets: [{
+              label: "Countries",
+              fill: true,
+              borderColor: config.colors.info,
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              data: [53, 20, 10, 80, 100, 45],
+            }]
+          },
+          gradientColors: config.colors.primaryGradient,
+          gradientStops: [1, 0.4, 0],
+        },
+        somePolarChart: {
+          // extraOptions: chartConfigs.barChartOptions,
+          chartData: {
+            labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
+            datasets: [{
+              label: "Countries",
+              fill: true,
+              borderColor: config.colors.info,
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              data: [53, 20, 10, 80, 100, 45],
+            }]
+          },
+          gradientColors: config.colors.primaryGradient,
+          gradientStops: [1, 0.4, 0],
+        },
+        someScatterChart: {
+          // extraOptions: chartConfigs.barChartOptions,
+          chartData: {
+            labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
+            datasets: [{
+              label: "Countries",
+              fill: true,
+              borderColor: config.colors.info,
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              data: [{
+                  x: 10,
+                  y: 20
+              }, {
+                  x: 15,
+                  y: 10
+              }]
             }]
           },
           gradientColors: config.colors.primaryGradient,

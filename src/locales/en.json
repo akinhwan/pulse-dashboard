@@ -1,9 +1,15 @@
 {
   "dashboard": {
+    "bubble": "Patient Staff Ratio",
+    "doughnut": "Patient Satisfaction",
+    "pie": "Insurance Type",
+    "polar": "Total Admissions by Divison",
+    "radar": "HACs",
+    "scatter": "scatter",
     "completedTasks": "Completed Tasks",
     "dailySales": "Daily Sales",
     "performance": "Patient Care",
-    "simpleTable": "Simple Table",
+    "simpleTable": "Current Staff on Shift",
     "totalShipments": "Department",
     "chartCategories": [
       "MICU",
@@ -33,6 +39,13 @@
       "Postop Hemorrhage"
     ],
     "criticalMetrics" : [
+      "Elective Total Hip/Knee Anthroplasty Complication",
+      "Pneumonia 30 Day Raw Mortality",
+      "Heart Failure 30 Day Raw Mortality",
+      "Acute Myocardial Infarction 30 Day Raw Mortality",
+      "Overall Rating",
+      "Communication with Nurses",
+      "Communication with Doctors",
       "Average Length of Stay",
       "Time to Service",
       "Patient Satisfaction",
@@ -57,59 +70,59 @@
       "title": "Simple Table",
       "columns": [
         "Name",
-        "Country",
-        "City",
-        "Salary"
+        "Occupation",
+        "Report",
+        "Code"
       ],
       "data": [
         {
           "id": 1,
-          "name": "Dakota Rice",
-          "salary": "$36.738",
-          "country": "Niger",
-          "city": "Oud-Turnhout"
+          "name": "Dakota Bowl",
+          "code": "A36738",
+          "occupation": "Nurse",
+          "report": "Julie Woodruff"
         },
         {
           "id": 2,
           "name": "Minerva Hooper",
-          "salary": "$23,789",
-          "country": "Curaçao",
-          "city": "Sinaai-Waas"
+          "code": "B23789",
+          "occupation": "Doctor",
+          "report": "Wayne Floyd"
         },
         {
           "id": 3,
           "name": "Sage Rodriguez",
-          "salary": "$56,142",
-          "country": "Netherlands",
-          "city": "Baileux"
+          "code": "C56142",
+          "occupation": "Physiotherapist",
+          "report": "Jim Burke"
         },
         {
           "id": 4,
           "name": "Philip Chaney",
-          "salary": "$38,735",
-          "country": "Korea, South",
-          "city": "Overland Park"
+          "code": "D38735",
+          "occupation": "Dietician",
+          "report": "Decky Deck"
         },
         {
           "id": 5,
           "name": "Doris Greene",
-          "salary": "$63,542",
-          "country": "Malawi",
-          "city": "Feldkirchen in Kärnten"
+          "code": "E63542",
+          "occupation": "Speech Therapist",
+          "report": "Dawn Witty"
         },
         {
           "id": 6,
           "name": "Mason Porter",
-          "salary": "$98,615",
-          "country": "Chile",
-          "city": "Gloucester"
+          "code": "F98615",
+          "occupation": "Pharmacist",
+          "report": "Elizabeth Meyer"
         },
         {
           "id": 7,
           "name": "Jon Porter",
-          "salary": "$78,615",
-          "country": "Portugal",
-          "city": "Gloucester"
+          "code": "G78615",
+          "occupation": "Social Worker",
+          "report": "Debbie Sexton"
         }
       ]
     },
@@ -150,12 +163,8 @@
     "title": "Pulse",
     "shortTitle": "CT",
     "dashboard": "dashboard",
-    "icons": "Icons",
-    "maps": "Maps",
     "notifications": "Notifications",
-    "userProfile": "User Profile",
-    "tableList": "Table List",
-    "typography": "Typography",
-    "rtlSupport": "RTL Support"
+    "customize": "Customize",
+    "tableList": "Staff"
   }
 }

@@ -1,4 +1,3 @@
-
 export const basicOptions = {
   maintainAspectRatio: false,
   legend: {
@@ -6,20 +5,6 @@ export const basicOptions = {
   },
   responsive: true,
 };
-
-// function randomScalingFactor() {
-// 	return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
-// }
-
-// function onRefresh(chart) {
-//   console.log('onRefresh', chart)
-//   chart.config.data.datasets.forEach(function(dataset) {
-//     dataset.data.push({
-//       x: Date.now(),
-//       y: randomScalingFactor()
-//     });
-//   });
-// }
 
 export let bigLineChartOptions = {
   ...basicOptions,
@@ -39,11 +24,10 @@ export let bigLineChartOptions = {
       realtime: {
         duration: 20000,
         ttl: 60000,
-        refresh: 1000,
-        delay: 2000,
+        refresh: 5000,
+        delay: 0,
         pause: false,
         onRefresh: function onRefresh(chart) {
-          console.log('onRefresh', chart)
           chart.config.data.datasets.forEach(function(dataset) {
             dataset.data.push({
               x: Date.now(),
@@ -309,3 +293,5 @@ export let barChartOptions = {
   }
 
 }
+
+// export let 

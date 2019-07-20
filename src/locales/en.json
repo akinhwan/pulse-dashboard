@@ -10,6 +10,8 @@
     "dailySales": "Daily Sales",
     "performance": "Patient Care",
     "simpleTable": "Current Staff on Shift",
+    "campus": "Campus",
+    "mainLevel": "Main Level",
     "totalShipments": "Department",
     "chartCategories": [
       "MICU",

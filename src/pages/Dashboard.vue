@@ -169,6 +169,53 @@
     </div>
 
 
+    <!-- BLUE PRINT -->
+    <div class="row">
+      <div class="col-12">
+        <card type="user">
+          <template slot="header">
+            <div class="row">
+              <div class="col-sm-6" :class="isRTL ? 'text-right' : 'text-left'">
+                <h5 class="card-category">{{$t('dashboard.campus')}}</h5>
+                <h2 class="card-title">{{$t('dashboard.mainLevel')}}</h2>
+              </div>
+              <!-- <div class="col-sm-6">
+                <div class="btn-group btn-group-toggle"
+                     :class="isRTL ? 'float-left' : 'float-right'"
+                     data-toggle="buttons">
+                  <label v-for="(option, index) in bigLineChartCategories"
+                         :key="option"
+                         class="btn btn-sm btn-primary btn-simple"
+                         :class="{active: bigLineChart.activeIndex === index}"
+                         :id="index">
+                    <input type="radio"
+                           @click="initBigChart(index)"
+                           name="options" autocomplete="off"
+                           :checked="bigLineChart.activeIndex === index">
+                    {{option}}
+                  </label>
+                </div>
+              </div> -->
+            </div>
+          </template>
+          <div class="chart-area">
+
+            <img src="img/blueprint.png" />
+            <!-- <line-chart style="height: 100%"
+                        v-if="loaded"
+                        ref="bigChart"
+                        chart-id="big-line-chart"
+                        :chart-data="bigLineChart.chartData"
+                        :gradient-colors="bigLineChart.gradientColors"
+                        :gradient-stops="bigLineChart.gradientStops"
+                        :extra-options="bigLineChart.extraOptions">
+            </line-chart> -->
+          </div>
+        </card>
+      </div>
+    </div>
+
+
     <div class="row">
       <div class="col-lg-6 col-md-12">
         <card type="tasks" :header-classes="{'text-right': isRTL}">
@@ -528,67 +575,6 @@
           },
           gradientColors: config.colors.primaryGradient,
           gradientStops: [1, 0.4, 0],
-        },
-        someScatterChart: {
-          // extraOptions: chartConfigs.barChartOptions,
-          chartData: {
-            labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
-            datasets: [{
-              label: "Overall Rating",
-              fill: true,
-              borderColor: config.colors.info,
-              borderWidth: 2,
-              borderDash: [],
-              borderDashOffset: 0.0,
-              data: [
-                {
-                  x: 10,
-                  y: 20
-                }, {
-                    x: 15,
-                    y: 10
-                },
-                {
-                    x: 12,
-                    y: 13
-                },
-                {
-                    x: 25,
-                    y: 16
-                },
-                {
-                    x: 18,
-                    y: 9
-                },
-                {
-                    x: 12,
-                    y: 18
-                },
-                {
-                    x: 19,
-                    y: 20
-                },
-                {
-                    x: 35,
-                    y: 30
-                },
-                {
-                    x: 45,
-                    y: 40
-                },
-                {
-                    x: 55,
-                    y: 50
-                },
-                {
-                    x: 65,
-                    y: 60
-                },
-              ]
-            }]
-          },
-          gradientColors: config.colors.primaryGradient,
-          gradientStops: [1, 0.4, 0],
         }
       }
     },
@@ -621,7 +607,7 @@
             pointRadius: 4,
             data: this.bigLineChart.allData[index]
           }],
-          labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+          // labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
         }
         this.$refs.bigChart.updateGradients(chartData);
         this.bigLineChart.chartData = chartData;

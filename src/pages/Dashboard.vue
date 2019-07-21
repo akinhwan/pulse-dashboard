@@ -267,6 +267,8 @@
         </card>
       </div>
 
+
+      <!-- TASKS -->
       <div class="col-lg-6 col-md-12">
         <card type="tasks" :header-classes="{'text-right': isRTL}">
           <template slot="header">
@@ -290,13 +292,23 @@
       </div>
     </div>
 
-
+    <!-- STAFF -->
     <div class="row">
-      <div class="col-lg-12 col-md-12">
+      <div class="col-lg-6 col-md-6">
         <card class="card" :header-classes="{'text-right': isRTL}">
-          <h4 slot="header" class="card-title">{{$t('dashboard.simpleTable')}}</h4>
+          <h4 slot="header" class="card-title">{{$t('dashboard.staff')}}</h4>
           <div class="table-responsive">
             <user-table></user-table>
+          </div>
+        </card>
+      </div>
+
+      <!-- PATIENTS -->
+      <div class="col-lg-6 col-md-6">
+        <card class="card" :header-classes="{'text-right': isRTL}">
+          <h4 slot="header" class="card-title">{{$t('dashboard.patients')}}</h4>
+          <div class="table-responsive">
+            <patient-table></patient-table>
           </div>
         </card>
       </div>
@@ -314,8 +326,9 @@
   import DoughnutChart from '@/components/Charts/DoughnutChart';
   import * as chartConfigs from '@/components/Charts/config';
   import TaskList from './Dashboard/TaskList';
-  import UserTable from './Dashboard/UserTable';
   import config from '@/config';
+  import UserTable from './Dashboard/UserTable';
+  import PatientTable from './Dashboard/PatientTable';
 
   export default {
     components: {
@@ -328,6 +341,7 @@
       PieChart,
       DoughnutChart,
       TaskList,
+      PatientTable,
       UserTable
     },
     data() {
@@ -502,7 +516,7 @@
               "Sepsis"
             ],
             datasets: [{
-              label: "Data",
+              label: "HAC",
               fill: true,
               borderColor: config.colors.primary,
               borderWidth: 2,
@@ -515,8 +529,9 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: [80, 100, 70, 80, 120, 80],
-            }]
+              data: [110, 100, 107, 104, 99, 109],
+            },
+            ]
           },
           gradientColors: config.colors.primaryGradient,
           gradientStops: [1, 0.2, 0],
@@ -565,15 +580,15 @@
         blueBarChart: {
           // extraOptions: chartConfigs.barChartOptions,
           chartData: {
-            labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
+            labels: ['ER', 'ICU', '2nd Floor', 'Rehab', 'Room', '3rd Floor'],
             datasets: [{
-              label: "Countries",
+              label: "Departments",
               fill: true,
               borderColor: config.colors.info,
               borderWidth: 2,
               borderDash: [],
               borderDashOffset: 0.0,
-              data: [53, 20, 10, 80, 100, 45],
+              data: [5, 20, 10, 37, 9, 45],
             }]
           },
           gradientColors: config.colors.primaryGradient,

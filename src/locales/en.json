@@ -4,12 +4,13 @@
     "doughnut": "Patient Satisfaction",
     "pie": "Insurance Type",
     "polar": "Total Admissions by Divison",
-    "radar": "HACs",
+    "radar": "Hospital Acquired Conditions",
     "scatter": "Overall Rating",
     "completedTasks": "Completed Tasks",
-    "dailySales": "Daily Sales",
+    "dailySales": "Avg Wait Times",
     "performance": "Patient Care",
-    "simpleTable": "Current Staff on Shift",
+    "staff": "Current Staff on Shift",
+    "patients": "Patients in Queue",
     "campus": "Campus",
     "mainLevel": "Main Level",
     "totalShipments": "Department",
@@ -125,6 +126,66 @@
           "code": "G78615",
           "occupation": "Social Worker",
           "report": "Debbie Sexton"
+        }
+      ]
+    },
+    "patientTable": {
+      "title": "Simple Table",
+      "columns": [
+        "Name",
+        "Room",
+        "Status",
+        "Wait"
+      ],
+      "data": [
+        { 
+          "id": 1,
+          "name": "Mr.Kennedy",
+          "status": "✅",
+          "room": "3A-1823",
+          "wait": "00:28:57"
+        },
+        {
+          "id": 2,
+          "name": "Mrs.Brett",
+          "status": "🚨",
+          "room": "2B-1632",
+          "wait": "00:19:06"
+        },
+        {
+          "id": 3,
+          "name": "Mr.Bean",
+          "status": "⚠️",
+          "room": "1C-0192",
+          "wait": "00:45:11"
+        },
+        {
+          "id": 4,
+          "name": "Mrs.Gibbs",
+          "status": "🚨",
+          "room": "S3-1829",
+          "wait": "00:01:09"
+        },
+        {
+          "id": 5,
+          "name": "Mr.Choi",
+          "status": "⚠️",
+          "room": "C9-2231",
+          "wait": "00:08:47"
+        },
+        {
+          "id": 6,
+          "name": "Mrs.Lang",
+          "status": "✅",
+          "room": "D7-2742",
+          "wait": "12:15:55"
+        },
+        {
+          "id": 7,
+          "name": "Mr.James",
+          "status": "✅",
+          "room": "E6-6283",
+          "wait": "01:06:23"
         }
       ]
     },

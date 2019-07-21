@@ -329,6 +329,7 @@
   import config from '@/config';
   import UserTable from './Dashboard/UserTable';
   import PatientTable from './Dashboard/PatientTable';
+  import axios from 'axios'
 
   export default {
     components: {
@@ -347,6 +348,7 @@
     data() {
       return {
         loaded: true,
+        stream: null,
         bigLineChart: {
           // index of allData correlates to Department number
           allData: [
@@ -506,7 +508,6 @@
           gradientStops: [1, 0.2, 0],
         },
         someRadarChart: {
-          // extraOptions: chartConfigs.purpleChartOptions,
           chartData: {
             labels: [ "SSI",
               "CAUTI",
@@ -537,7 +538,6 @@
           gradientStops: [1, 0.2, 0],
         },
         greenRadarChart: {
-          // extraOptions: chartConfigs.greenChartOptions,
           chartData: {
             labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
             datasets: [{
@@ -578,7 +578,6 @@
           gradientStops: [1, 0.4, 0],
         },
         blueBarChart: {
-          // extraOptions: chartConfigs.barChartOptions,
           chartData: {
             labels: ['ER', 'ICU', '2nd Floor', 'Rehab', 'Room', '3rd Floor'],
             datasets: [{
@@ -595,7 +594,6 @@
           gradientStops: [1, 0.4, 0],
         },
         someBubbleChart: {
-          // extraOptions: chartConfigs.barChartOptions,
           chartData: {
             labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
             datasets: [{
@@ -652,7 +650,6 @@
           gradientStops: [1, 0.4, 0],
         },
         someDoughnutChart: {
-          // extraOptions: chartConfigs.barChartOptions,
           chartData: {
             labels: ['Very Unsatisfied', 'Unsatisfied', 'Neutral', 'Satisfied', 'Very Satisfied'],
             datasets: [{
@@ -660,15 +657,10 @@
               fill: true,
               borderColor: [
                 '#f5365c',
-                // '#fb6340',
                 '#ffd600',
                 '#2dce89',
                 '#5e72e4',
-                // '#8965e0',
-                // '#5603ad',
-                '#f3a4b5',
-                // '#11cdef',
-                // '#2bffc6'
+                '#f3a4b5'
                 ],
               borderWidth: 2,
               borderDash: [],
@@ -724,14 +716,11 @@
               fill: true,
               borderColor: [
                 '#f5365c',
-                // '#fb6340',
                 '#ffd600',
                 '#2dce89',
                 '#5e72e4',
-                // '#8965e0',
                 '#5603ad',
                 '#f3a4b5',
-                // '#11cdef',
                 '#2bffc6'
                 ],
               borderWidth: 2,
@@ -771,39 +760,24 @@
             pointHoverBorderWidth: 15,
             pointRadius: 4,
             data: this.bigLineChart.allData[index]
-          }],
-          // labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+          }]
         }
-        this.$refs.bigChart.updateGradients(chartData);
+        // this.$refs.bigChart.updateGradients(chartData);
         this.bigLineChart.chartData = chartData;
         this.bigLineChart.activeIndex = index;
       },
     },
-    // async mounted () {
-    //   this.loaded = false
-    //   try {
-    //     // const { userlist } = await fetch('/api/userlist')
-    //     // this.chartdata = userlist
-    //     this.chartData = [60, 80, 60, 80, 60, 80, 60, 80, 60, 80, 60, 80]
-    //     this.loaded = true
-    //   } catch (e) {
-    //     console.error(e)
-    //   }
-    // },
-    mounted() {
-      this.i18n = this.$i18n;
-      if (this.enableRTL) {
-        this.i18n.locale = 'ar';
-        this.$rtl.enableRTL();
-      }
+    async mounted () {
+      axios.get(`https://pulse-sfmc.herokuapp.com/streams`)
+      .then(response => {
+        this.stream = response.data.stream.metrics
+      })
+      .catch(e => {
+        this.errors.push(e)
+      })
+
       this.initBigChart(0);
     },
-    beforeDestroy() {
-      if (this.$rtl.isRTL) {
-        this.i18n.locale = 'en';
-        this.$rtl.disableRTL();
-      }
-    }
   };
 </script>
 <style>

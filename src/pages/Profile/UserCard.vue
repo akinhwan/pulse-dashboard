@@ -8,16 +8,16 @@
       <div class="block block-three"></div>
       <div class="block block-four"></div>
       <a href="#">
-        <img class="avatar" src="img/anime6.png" alt="...">
-        <h5 class="title">{{user.fullName}}</h5>
+        <img class="avatar" src="img/maryann.png" alt="...">
+        <h5 class="title">Maryann Reese</h5>
       </a>
       <p class="description">
-        {{user.title}}
+        President and Chief Executive Officer
       </p>
     </div>
     <p></p>
     <p class="card-description">
-      {{user.description}}
+      She serves on the Missouri Hospital Association Board of Directors, Missouri Hospital Association Strategic Quality Advisory Committee, Cape Girardeau Chamber of Commerce Board, Cape Girardeau Chamber of Commerce Executive Committee, Boise State University Board of Ambassadors Advisory Council and Big Brothers Big Sisters of Eastern Missouri (BBBSEMO) Board.
     </p>
     <div slot="footer" class="button-container">
       <base-button icon round class="btn-facebook">

@@ -191,63 +191,63 @@
     },
     "taskList": [
       {
-        "title": "Update the Documentation",
-        "description": "Dwuamish Head, Seattle, WA 8:47 AM",
+        "title": "Ensure preoperative skin antisepsis, such as basic soap and water shower; use chlorhexidine gluconate showers",
+        "description": "Develop standardized perioperative skin antiseptic practices utilizing the most appropriate skin antiseptic for the type of surgery performed ",
         "done": false
       },
       {
-        "title": "GDPR Compliance",
-        "description": "The GDPR is a regulation that requires businesses to protect the personal data and privacy of Europe citizens for transactions that occur within EU member states.",
+        "title": "Establish system so surgical site infection data is analyzed and shared",
+        "description": "Develop a protocol to provide guidance on blood transfusion practices, as a unit of packed red blood cells should be considered a transplant/immune modulator and has been linked to a higher risk of SSIs",
         "done": true
       },
       {
-        "title": "Solve the issues",
-        "description": "Fifty percent of all respondents said they would be more likely to shop at a company",
+        "title": "Send discharge summary and after-hospital care plan to primary care provider within 24 to 48 hours of discharge",
+        "description": "Conduct post-discharge follow-up calls within 48 hours of discharge; reinforce components of afterhospital care plan using teach-back and identify any unmet needs, such as access to medication, transportation to follow-up appointments, etc.",
         "done": false
       },
       {
-        "title": "Release v2.0.0",
-        "description": "Ra Ave SW, Seattle, WA 98116, SUA 11:19 AM",
+        "title": "Identify primary caregiver, if not the patient, and include him/her in education and discharge planning",
+        "description": "Provide patient education that is culturally sensitive, incorporates health literacy concepts and includes information on diagnosis and symptom management, medications and post-discharge care needs",
         "done": false
       },
       {
-        "title": "Export the processed files",
+        "title": "Perform accurate medication reconciliation at admission, at any change in level of care and at discharge",
         "description": "The report also shows that consumers will not easily forgive a company once a breach exposing their personal data occurs.",
         "done": false
       },
       {
-        "title": "Arival at export process",
-        "description": "Capitol Hill, Seattle, WA 12:34 AM",
+        "title": "Conduct formal risk of readmission assessment. Align interventions to patient’s needs and risk stratification level",
+        "description": "Conduct enhanced admission assessment of discharge needs and begin discharge planning at admission",
         "done": false
       },
       {
-        "title": "Update the Documentation",
-        "description": "Dwuamish Head, Seattle, WA 8:47 AM",
+        "title": "Use breathable glide sheets and/or lifting devices to prevent shear and friction",
+        "description": "Cover operating room tables with special overlay mattresses for long cases (greater than 4 hours some hospitals choose cases greater than 2 hours) and high-risk patients.",
         "done": false
       },
       {
-        "title": "GDPR Compliance",
-        "description": "The GDPR is a regulation that requires businesses to protect the personal data and privacy of Europe citizens for transactions that occur within EU member states.",
+        "title": "Monitor weight, nutrition and hydration status; for high-risk patients, generate an automatic registered dietician consult.",
+        "description": "Set specific time frames or create reminder systems to reposition patient, such as hourly or every- two-hours rounding with a purpose (the 3 P’s: pain, potty, position-pressure). This aligns nicely with fall prevention",
         "done": true
       },
       {
-        "title": "Solve the issues",
-        "description": "Fifty percent of all respondents said they would be more likely to shop at a company",
+        "title": "Assess skin and risk at least daily and incorporate into other routine assessments",
+        "description": "Implement head-to-toe skin evaluation and risk assessment tool; assess the skin and risks within 4 hours of admission; risk and skin assessment should be age appropriate",
         "done": false
       },
       {
-        "title": "Release v2.0.0",
-        "description": "Ra Ave SW, Seattle, WA 98116, SUA 11:19 AM",
+        "title": "Review medications (by pharmacist); avoid unnecessary hypnotics, sedatives",
+        "description": "Include patients, families and caregivers in efforts to prevent falls. Educate regarding fall prevention measures; stay with patient",
         "done": false
       },
       {
-        "title": "Export the processed files",
-        "description": "The report also shows that consumers will not easily forgive a company once a breach exposing their personal data occurs.",
+        "title": "Reassess risk with changes in patient condition",
+        "description": "Round every 1 to 2 hours for high-risk patients address needs (e.g., 3Ps: pain, potty,position-pressure). Combine with other tasks (vital signs)",
         "done": false
       },
       {
-        "title": "Arival at export process",
-        "description": "Capitol Hill, Seattle, WA 12:34 AM",
+        "title": "Use 2% chlorhexidine-impregnated cloths for daily skin cleansing",
+        "description": "Do not routinely replace CVCs, PICCs, hemodialysis catheters or pulmonary artery catheters",
         "done": false
       }
     ]

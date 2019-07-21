@@ -28,7 +28,7 @@
           address: 'Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09',
           city: 'Melbourne',
           country: 'Australia',
-          about: 'Lamborghini Mercy, Your chick she so thirsty, I\'m in that two seat Lambo.'
+          about: 'The patient satisfaction dashboard is the showcase of your healthcare facility. It will translate the efforts you put in welcoming and treating your patients, as well as the degree of safety you deliver to them. Unsatisfied patients will neither return in case of a problem, nor recommend your facility to friends and family. At the internet age, the viral spread of “bad buzz” can be harmful and hard to contain. The use of this type of healthcare dashboard can be an asset, especially in the communication with your patients. Healthcare is a very specific industry because it is exposed to a lot of human subjectivity and it deals with high stakes, the health and life of people. Communication and understanding is often cited as an important aspect in the doctor-patient relationship, this is why such dashboard can benefit your services a lot. Patients like good quality of care, which requires their feedback.'
         },
         user: {
           fullName: 'Mike Andrew',

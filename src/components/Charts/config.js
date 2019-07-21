@@ -325,9 +325,7 @@ export let smallChartOptions = {
     bodyFontColor: '#666',
     bodySpacing: 4,
     xPadding: 12,
-    mode: "nearest",
     intersect: 0,
-    position: "nearest"
   },
   scales: {
     yAxes: [{

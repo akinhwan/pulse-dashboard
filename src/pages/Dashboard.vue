@@ -6,9 +6,9 @@
       <div class="col-3">
         <card type="chart" class="shorter-cards">	    
           <template slot="header">	
-            <h5 class="card-category">Average Days Admitted</h5>	
-            <h3 class="card-title">8.92</h3>	
-            <h5 class="card-title"><i class="tim-icons icon-triangle-right-17 trend-up"></i> 1%</h5>	
+            <h5 class="card-category">Readmission Rate</h5>	
+            <h3 class="card-title">3%</h3>	
+            <h5 class="card-title"><i class="tim-icons icon-triangle-right-17 trend-up"></i> .08%</h5>	
           </template>	
           <div class="chart-area">	
             <line-chart style="height: 100%"	
@@ -26,7 +26,7 @@
         <card type="chart" class="shorter-cards">	 
           <template slot="header">	
             <h5 class="card-category">Total Patients Admitted</h5>	
-            <h3 class="card-title">8,183</h3>	
+            <h3 class="card-title">4,183</h3>	
             <h5 class="card-title"><i class="tim-icons icon-triangle-right-17 trend-up"></i> +20%</h5>	
           </template>	
           <div class="chart-area">	
@@ -85,8 +85,8 @@
           <template slot="header">
             <div class="row">
               <div class="col-sm-6" :class="isRTL ? 'text-right' : 'text-left'">
-                <h5 class="card-category">{{$t('dashboard.totalShipments')}}</h5>
-                <h2 class="card-title">{{$t('dashboard.performance')}}</h2>
+                <h5 class="card-category">Overall Departments</h5>
+                <h2 class="card-title">Patient Care Score</h2>
               </div>
               <div class="col-sm-6">
                 <div class="btn-group btn-group-toggle"
@@ -127,8 +127,7 @@
       <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart" class="taller-cards">
           <template slot="header">
-            <h5 class="card-category">{{$t('dashboard.dailySales')}}</h5>
-            <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info "></i> 3,500€</h3>
+            <h3 class="card-title"><i class="tim-icons icon-time-alarm text-warning "></i> {{$t('dashboard.dailySales')}}</h3>
           </template>
           <div class="chart-area">
             <bar-chart style="height: 100%"
@@ -143,8 +142,7 @@
       <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart" class="taller-cards">
           <template slot="header">
-            <h5 class="card-category">{{$t('dashboard.radar')}}</h5>
-            <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>
+            <h3 class="card-title"><i class="tim-icons icon-puzzle-10 text-primary "></i> {{$t('dashboard.radar')}}</h3>
           </template>
           <div class="chart-area">
             <radar-chart style="height: 100%"
@@ -160,8 +158,8 @@
       <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart" class="taller-cards">
           <template slot="header">
-            <h5 class="card-category">{{$t('dashboard.polar')}}</h5>
-            <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info "></i> 3,500€</h3>
+            <!-- <h5 class="card-category">{{$t('dashboard.polar')}}</h5> -->
+            <h3 class="card-title"><i class="tim-icons icon-istanbul text-muted "></i> {{$t('dashboard.polar')}}</h3>
           </template>
           <div class="chart-area">
             <polar-chart style="height: 100%"
@@ -173,22 +171,6 @@
           </div>
         </card>
       </div>
-      <!-- <div class="col-lg-4" :class="{'text-right': isRTL}">
-        <card type="chart" class="taller-cards">
-          <template slot="header">
-            <h5 class="card-category">{{$t('dashboard.scatter')}}</h5>
-            <h3 class="card-title"><i class="tim-icons icon-send text-success "></i> 12,100K</h3>
-          </template>
-          <div class="chart-area">
-            <scatter-chart style="height: 100%"
-                        chart-id="scatter-chart"
-                        :chart-data="someScatterChart.chartData"
-                        :gradient-stops="someScatterChart.gradientStops"
-                        :extra-options="someScatterChart.extraOptions">
-            </scatter-chart>
-          </div>
-        </card>
-      </div> -->
     </div>
 
 
@@ -198,8 +180,7 @@
       <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart" class="taller-cards">
           <template slot="header">
-            <h5 class="card-category">{{$t('dashboard.doughnut')}}</h5>
-            <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info "></i> 3,500€</h3>
+            <h3 class="card-title"><i class="tim-icons icon-satisfied text-success "></i> {{$t('dashboard.doughnut')}}</h3>
           </template>
           <div class="chart-area">
             <doughnut-chart style="height: 100%"
@@ -214,8 +195,7 @@
       <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart" class="taller-cards">
           <template slot="header">
-            <h5 class="card-category">{{$t('dashboard.bubble')}}</h5>
-            <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>
+            <h3 class="card-title"><i class="tim-icons icon-badge text-info "></i> {{$t('dashboard.bubble')}}</h3>
           </template>
           <div class="chart-area">
             <bubble-chart style="height: 100%"
@@ -231,8 +211,7 @@
       <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart" class="taller-cards">
           <template slot="header">
-            <h5 class="card-category">{{$t('dashboard.pie')}}</h5>
-            <h3 class="card-title"><i class="tim-icons icon-send text-success "></i> 12,100K</h3>
+            <h3 class="card-title"><i class="tim-icons icon-single-copy-04 text-danger "></i> {{$t('dashboard.pie')}}</h3>
           </template>
           <div class="chart-area">
             <pie-chart style="height: 100%"
@@ -292,27 +271,6 @@
       </div>
     </div>
 
-    <!-- STAFF -->
-    <div class="row">
-      <div class="col-lg-6 col-md-6">
-        <card class="card" :header-classes="{'text-right': isRTL}">
-          <h4 slot="header" class="card-title">{{$t('dashboard.staff')}}</h4>
-          <div class="table-responsive">
-            <user-table></user-table>
-          </div>
-        </card>
-      </div>
-
-      <!-- PATIENTS -->
-      <div class="col-lg-6 col-md-6">
-        <card class="card" :header-classes="{'text-right': isRTL}">
-          <h4 slot="header" class="card-title">{{$t('dashboard.patients')}}</h4>
-          <div class="table-responsive">
-            <patient-table></patient-table>
-          </div>
-        </card>
-      </div>
-    </div>
   </div>
 </template>
 <script>
@@ -424,10 +382,7 @@
               borderDashOffset: 0.0,
               pointBackgroundColor: '#11cdef',
               pointBorderColor: 'rgba(255,255,255,0)',
-              pointHoverBackgroundColor: '#11cdef',
               pointBorderWidth: 20,
-              pointHoverRadius: 4,
-              pointHoverBorderWidth: 15,
               pointRadius: 4,
               data: [80, 100, 70, 80, 120, 80],
             }]

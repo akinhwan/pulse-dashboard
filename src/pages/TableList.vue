@@ -1,31 +1,31 @@
 <template>
     <div class="row">
+
+      <!-- STAFF -->
       <div class="col-12">
-        <card :title="table1.title">
+        <card class="card" :header-classes="{'text-right': isRTL}">
+          <h4 slot="header" class="card-title">{{$t('dashboard.staff')}}</h4>
           <div class="table-responsive">
-            <base-table :data="table1.data"
-                        :columns="table1.columns"
-                        thead-classes="text-primary">
-            </base-table>
+            <user-table></user-table>
           </div>
         </card>
       </div>
 
+      <!-- PATIENTS -->
       <div class="col-12">
-        <card class="card-plain">
-          <div class="table-full-width table-responsive">
-            <base-table :title="table2.title" :sub-title="table2.subTitle" :data="table2.data"
-                         :columns="table2.columns">
-
-            </base-table>
+        <card class="card" :header-classes="{'text-right': isRTL}">
+          <h4 slot="header" class="card-title">{{$t('dashboard.patients')}}</h4>
+          <div class="table-responsive">
+            <patient-table></patient-table>
           </div>
         </card>
       </div>
-
     </div>
 </template>
 <script>
 import { BaseTable } from "@/components";
+import UserTable from './Dashboard/UserTable';
+import PatientTable from './Dashboard/PatientTable';
 const tableColumns = ["Name", "Occupation", "DirectReport", "Code"];
 const tableData = [
   {
@@ -81,7 +81,9 @@ const tableData = [
 
 export default {
   components: {
-    BaseTable
+    BaseTable,
+    UserTable,
+    PatientTable
   },
   data() {
     return {

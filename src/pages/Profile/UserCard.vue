@@ -8,11 +8,11 @@
       <div class="block block-three"></div>
       <div class="block block-four"></div>
       <a href="#">
-        <img class="avatar" src="img/maryann.png" alt="...">
-        <h5 class="title">Maryann Reese</h5>
+        <img class="avatar" src="img/nurse.png" alt="...">
+        <h5 class="title">Lead Nurse</h5>
       </a>
       <p class="description">
-        President and Chief Executive Officer
+        Anna Seer
       </p>
     </div>
     <p></p>

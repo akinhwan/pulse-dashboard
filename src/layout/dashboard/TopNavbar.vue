@@ -79,7 +79,7 @@
                            menu-classes="dropdown-navbar">
               <a slot="title" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="true">
                 <div class="photo">
-                  <img src="img/maryann.png">
+                  <img src="img/nurse.png">
                 </div>
                 <b class="caret d-none d-lg-block d-xl-block"></b>
                 <p class="d-lg-none">

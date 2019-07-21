@@ -4,8 +4,6 @@
  ![version](https://img.shields.io/badge/version-1.0.0-blue.svg)  ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 
-<!-- ![Product Gif](https://github.com/creativetimofficial/pulse-dashboard/blob/live-demo/src/assets/demo/product-gif.gif?raw=true) -->
-
 **Pulse Dashboard** is a comprehensive dashboard meant to give a 360 degree at-a-glance realtime understanding of your Hospital and its Department/Units with a focus on Patient Care Metrics.
 
 
@@ -26,11 +24,7 @@
 
 ## Demo
 
-- [Start page](https://demos.creative-tim.com/pulse-dashboard)
-- [User profile page](https://demos.creative-tim.com/pulse-dashboard/#/profile)
-- [Tables page ](https://demos.creative-tim.com/pulse-dashboard/#/table-list)
-- [Maps Page](https://demos.creative-tim.com/pulse-dashboard/#/maps)
-- [Notifications page](https://demos.creative-tim.com//pulse-dashboard/#/notifications)
+- [Youtube Screen Recording](https://youtu.be/e8UNirOMPsA)
 
 
 ## Quick start
@@ -183,7 +177,9 @@ If you have questions or need help integrating the product please [contact us](h
 
 ## Useful Links
 
+- [Devpost](https://devpost.com/software/pulse-kctoyu) Devpost Submission
 - [Akinhwan](https://www.akinhwan.site) @akinhwan Portfolio Site
+
 
 ##### Social Media
 

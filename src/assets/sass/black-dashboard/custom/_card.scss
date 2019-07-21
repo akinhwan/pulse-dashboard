@@ -238,13 +238,30 @@
 
 .shorter-cards {
   max-height: 155px !important;
-  
+
+  .card-header {
+    margin-bottom: -1.7rem;
+    text-align: center;
+  }
+
   .card-body {
     padding: 0 !important;
 
     .chart-area {
       height: 100px !important;
     
+    }
+  }
+
+  .card-title {
+    .trend-up {
+      transform: rotate(-90deg) !important;
+      color: $green;
+    }
+
+    .trend-down {
+      transform: rotate(90deg) !important;
+      color: $red;
     }
   }
 

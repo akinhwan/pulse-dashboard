@@ -294,4 +294,38 @@ export let barChartOptions = {
 
 }
 
-// export let 
+export let smallChartOptions = {
+  ...basicOptions,
+  tooltips: {
+    backgroundColor: '#f5f5f5',
+    titleFontColor: '#333',
+    bodyFontColor: '#666',
+    bodySpacing: 4,
+    xPadding: 12,
+    mode: "nearest",
+    intersect: 0,
+    position: "nearest"
+  },
+  scales: {
+    yAxes: [{
+      barPercentage: 1.6,
+      gridLines: {
+        drawBorder: false,
+        color: 'rgba(29,140,248,0.0)',
+        zeroLineColor: "transparent",
+      },
+      ticks: {
+        display: false
+      }
+    }],
+
+    xAxes: [{
+      barPercentage: 1.6,
+      gridLines: {
+        drawBorder: false,
+        color: 'rgba(225,78,202,0.1)',
+        zeroLineColor: "transparent",
+      }
+    }]
+  }
+}

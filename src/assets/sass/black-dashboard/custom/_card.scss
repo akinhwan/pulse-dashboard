@@ -235,3 +235,21 @@
   margin-bottom: 200px;
   height: 90%;
 }
+
+.shorter-cards {
+  max-height: 155px !important;
+  
+  .card-body {
+    padding: 0 !important;
+
+    .chart-area {
+      height: 100px !important;
+    
+    }
+  }
+
+  canvas {
+    width: 113% !important;
+    margin-left: -12% !important;
+  }
+}

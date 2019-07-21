@@ -2,6 +2,78 @@
   <div>
 
     <div class="row">
+      <div class="col-3">
+        <card type="chart" class="shorter-cards">	    
+          <template slot="header">	
+            <h5 class="card-category">{{$t('dashboard.totalShipments')}}</h5>	
+            <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>	
+          </template>	
+          <div class="chart-area">	
+            <line-chart style="height: 100%"	
+                        chart-id="purple-line-chart"	
+                        :chart-data="smallBlueLine.chartData"	
+                        :gradient-colors="smallBlueLine.gradientColors"	
+                        :gradient-stops="smallBlueLine.gradientStops"	
+                        :extra-options="smallBlueLine.extraOptions">	
+            </line-chart>	
+          </div>	
+        </card>
+      </div>
+
+      <div class="col-3">
+        <card type="chart" class="shorter-cards">	 
+          <template slot="header">	
+            <h5 class="card-category">{{$t('dashboard.completedTasks')}}</h5>	
+            <h3 class="card-title"><i class="tim-icons icon-send text-success "></i> 12,100K</h3>	
+          </template>	
+          <div class="chart-area">	
+            <line-chart style="height: 100%"	
+                        chart-id="green-line-chart"	
+                        :chart-data="smallYellowLine.chartData"	
+                        :gradient-stops="smallYellowLine.gradientStops"	
+                        :extra-options="smallYellowLine.extraOptions">	
+            </line-chart>	
+          </div>	
+        </card>
+      </div>
+
+      <div class="col-3">
+        <card type="chart" class="shorter-cards">	    
+          <template slot="header">	
+            <h5 class="card-category">{{$t('dashboard.totalShipments')}}</h5>	
+            <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>	
+          </template>	
+          <div class="chart-area">	
+            <line-chart style="height: 100%"	
+                        chart-id="purple-line-chart"	
+                        :chart-data="smallRedLine.chartData"	
+                        :gradient-colors="smallRedLine.gradientColors"	
+                        :gradient-stops="smallRedLine.gradientStops"	
+                        :extra-options="smallRedLine.extraOptions">	
+            </line-chart>	
+          </div>	
+        </card>
+      </div>
+
+      <div class="col-3">
+        <card type="chart" class="shorter-cards">	 
+          <template slot="header">	
+            <h5 class="card-category">{{$t('dashboard.completedTasks')}}</h5>	
+            <h3 class="card-title"><i class="tim-icons icon-send text-success "></i> 12,100K</h3>	
+          </template>	
+          <div class="chart-area">	
+            <line-chart style="height: 100%"	
+                        chart-id="green-line-chart"	
+                        :chart-data="smallPinkLine.chartData"	
+                        :gradient-stops="smallPinkLine.gradientStops"	
+                        :extra-options="smallPinkLine.extraOptions">	
+            </line-chart>	
+          </div>	
+        </card>
+      </div>
+    </div>
+
+    <div class="row">
       <div class="col-12">
         <card type="chart">
           <template slot="header">
@@ -179,37 +251,12 @@
                 <h5 class="card-category">{{$t('dashboard.campus')}}</h5>
                 <h2 class="card-title">{{$t('dashboard.mainLevel')}}</h2>
               </div>
-              <!-- <div class="col-sm-6">
-                <div class="btn-group btn-group-toggle"
-                     :class="isRTL ? 'float-left' : 'float-right'"
-                     data-toggle="buttons">
-                  <label v-for="(option, index) in bigLineChartCategories"
-                         :key="option"
-                         class="btn btn-sm btn-primary btn-simple"
-                         :class="{active: bigLineChart.activeIndex === index}"
-                         :id="index">
-                    <input type="radio"
-                           @click="initBigChart(index)"
-                           name="options" autocomplete="off"
-                           :checked="bigLineChart.activeIndex === index">
-                    {{option}}
-                  </label>
-                </div>
-              </div> -->
             </div>
           </template>
           <div class="chart-area">
 
-            <img src="img/blueprint.png" />
-            <!-- <line-chart style="height: 100%"
-                        v-if="loaded"
-                        ref="bigChart"
-                        chart-id="big-line-chart"
-                        :chart-data="bigLineChart.chartData"
-                        :gradient-colors="bigLineChart.gradientColors"
-                        :gradient-stops="bigLineChart.gradientStops"
-                        :extra-options="bigLineChart.extraOptions">
-            </line-chart> -->
+            <img src="img/dpts.png" />
+          
           </div>
         </card>
       </div>
@@ -340,6 +387,102 @@
           },
           gradientColors: ['rgba(66,134,121,0.15)', 'rgba(66,134,121,0.0)', 'rgba(66,134,121,0)'],
           gradientStops: [1, 0.4, 0],
+        },
+        smallBlueLine: {
+          extraOptions: chartConfigs.smallChartOptions,
+          chartData: {
+            labels: [],
+            datasets: [{
+              label: "Data",
+              fill: true,
+              borderColor: '#11cdef',
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              pointBackgroundColor: '#11cdef',
+              pointBorderColor: 'rgba(255,255,255,0)',
+              pointHoverBackgroundColor: '#11cdef',
+              pointBorderWidth: 20,
+              pointHoverRadius: 4,
+              pointHoverBorderWidth: 15,
+              pointRadius: 4,
+              data: [80, 100, 70, 80, 120, 80],
+            }]
+          },
+          gradientColors: config.colors.primaryGradient,
+          gradientStops: [1, 0.2, 0],
+        },
+        smallPinkLine: {
+          extraOptions: chartConfigs.smallChartOptions,
+          chartData: {
+            labels: [],
+            datasets: [{
+              label: "Data",
+              fill: true,
+              borderColor: '#f3a4b5',
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              pointBackgroundColor: '#f3a4b5',
+              pointBorderColor: 'rgba(255,255,255,0)',
+              pointHoverBackgroundColor: '#f3a4b5',
+              pointBorderWidth: 20,
+              pointHoverRadius: 4,
+              pointHoverBorderWidth: 15,
+              pointRadius: 4,
+              data: [100, 80, 70, 80, 120, 80],
+            }]
+          },
+          gradientColors: config.colors.primaryGradient,
+          gradientStops: [1, 0.2, 0],
+        },
+        smallRedLine: {
+          extraOptions: chartConfigs.smallChartOptions,
+          chartData: {
+            labels: [],
+            datasets: [{
+              label: "Data",
+              fill: true,
+              borderColor: '#8965e0',
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              pointBackgroundColor: '#8965e0',
+              pointBorderColor: 'rgba(255,255,255,0)',
+              pointHoverBackgroundColor: '#8965e0',
+              pointBorderWidth: 20,
+              pointHoverRadius: 4,
+              pointHoverBorderWidth: 15,
+              pointRadius: 4,
+              data: [90, 0, 50],
+            }]
+          },
+          gradientColors: config.colors.primaryGradient,
+          gradientStops: [1, 0.2, 0],
+        },
+        smallYellowLine: {
+          extraOptions: chartConfigs.smallChartOptions,
+          chartData: {
+            labels: [],
+            datasets: [{
+              label: "Data",
+              fill: true,
+              borderColor: '#ffd600',
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              pointBackgroundColor: '#ffd600',
+              pointBorderColor: 'rgba(255,255,255,0)',
+              pointHoverBackgroundColor: '#ffd600',
+              pointBorderWidth: 20,
+              pointHoverRadius: 4,
+              pointHoverBorderWidth: 15,
+              pointRadius: 4,
+              data: [0, 90, 50],
+            }]
+          },
+          gradientColors: config.colors.primaryGradient,
+          gradientStops: [1, 0.2, 0],
         },
         someRadarChart: {
           // extraOptions: chartConfigs.purpleChartOptions,

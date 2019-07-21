@@ -1,5 +1,5 @@
 <template>
-  <div>Welcome to <b>Black Dashboard</b> - a beautiful freebie for every web developer.</div>
+  <div>Warning! <b>Surgical site infection</b> is trending up again.</div>
 </template>
 
 <script>

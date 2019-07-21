@@ -49,7 +49,7 @@
             <base-dropdown tag="li"
                            :menu-on-right="!$rtl.isRTL"
                            title-tag="a" class="nav-item">
-              <a slot="title" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="true">
+              <a type="warning" @click="notifyVue('bottom', 'right')" slot="title" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="true">
                 <div class="notification d-none d-lg-block d-xl-block"></div>
                 <i class="tim-icons icon-sound-wave"></i>
                 <p class="d-lg-none">
@@ -107,10 +107,14 @@
   import { CollapseTransition } from 'vue2-transitions';
   import Modal from '@/components/Modal';
 
+  import NotificationTemplate from '../../pages/Notifications/NotificationTemplate';
+  import { BaseAlert } from '@/components';
+
   export default {
     components: {
       CollapseTransition,
-      Modal
+      Modal,
+      BaseAlert
     },
     computed: {
       routeName() {
@@ -126,10 +130,24 @@
         activeNotifications: false,
         showMenu: false,
         searchModalVisible: false,
-        searchQuery: ''
+        searchQuery: '',
+        type: ["", "info", "success", "warning", "danger"],
+        notifications: {
+          topCenter: false
+        }
       };
     },
     methods: {
+      notifyVue(verticalAlign, horizontalAlign) {
+        this.$notify({
+          component: NotificationTemplate,
+          icon: "tim-icons icon-bell-55",
+          horizontalAlign: horizontalAlign,
+          verticalAlign: verticalAlign,
+          type: this.type[3],
+          timeout: 0
+        });
+      },
       capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
       },

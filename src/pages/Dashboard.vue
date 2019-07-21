@@ -85,7 +85,7 @@
           <template slot="header">
             <div class="row">
               <div class="col-sm-6" :class="isRTL ? 'text-right' : 'text-left'">
-                <h5 class="card-category">Overall Departments</h5>
+                <h5 class="card-category">Departments</h5>
                 <h2 class="card-title">Patient Care Score</h2>
               </div>
               <div class="col-sm-6">

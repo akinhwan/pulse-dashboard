@@ -86,12 +86,12 @@ export default {
   data() {
     return {
       table1: {
-        title: "Current Shift Staff",
+        title: "Current Staff on Shift",
         columns: [...tableColumns],
         data: [...tableData]
       },
       table2: {
-        title: "Table on Plain Background",
+        title: "Patients in Queue",
         columns: [...tableColumns],
         data: [...tableData]
       }

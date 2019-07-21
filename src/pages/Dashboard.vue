@@ -6,8 +6,8 @@
       <div class="col-3">
         <card type="chart" class="shorter-cards">	    
           <template slot="header">	
-            <h5 class="card-category">{{$t('dashboard.completedTasks')}}</h5>	
-            <h3 class="card-title">12,100K</h3>	
+            <h5 class="card-category">Average Days Admitted</h5>	
+            <h3 class="card-title">8.92</h3>	
             <h5 class="card-title"><i class="tim-icons icon-triangle-right-17 trend-up"></i> 1%</h5>	
           </template>	
           <div class="chart-area">	
@@ -25,8 +25,8 @@
       <div class="col-3">
         <card type="chart" class="shorter-cards">	 
           <template slot="header">	
-            <h5 class="card-category">{{$t('dashboard.completedTasks')}}</h5>	
-            <h3 class="card-title">12,100K</h3>	
+            <h5 class="card-category">Total Patients Admitted</h5>	
+            <h3 class="card-title">8,183</h3>	
             <h5 class="card-title"><i class="tim-icons icon-triangle-right-17 trend-up"></i> +20%</h5>	
           </template>	
           <div class="chart-area">	
@@ -43,8 +43,8 @@
       <div class="col-3">
         <card type="chart" class="shorter-cards">	    
           <template slot="header">	
-            <h5 class="card-category">{{$t('dashboard.completedTasks')}}</h5>	
-            <h3 class="card-title">12,100K</h3>	
+            <h5 class="card-category">Average Length of Stay</h5>	
+            <h3 class="card-title">7.5 Days</h3>	
             <h5 class="card-title"><i class="tim-icons icon-triangle-right-17 trend-down"></i> -15%</h5>	
           </template>	
           <div class="chart-area">	
@@ -62,8 +62,8 @@
       <div class="col-3">
         <card type="chart" class="shorter-cards">	 
           <template slot="header">	
-            <h5 class="card-category">{{$t('dashboard.completedTasks')}}</h5>	
-            <h3 class="card-title">12,100K</h3>	
+            <h5 class="card-category">Average Admission Cost</h5>	
+            <h3 class="card-title">$388,204</h3>	
             <h5 class="card-title"><i class="tim-icons icon-triangle-right-17 trend-down"></i> -1%</h5>	
           </template>	
           <div class="chart-area">	

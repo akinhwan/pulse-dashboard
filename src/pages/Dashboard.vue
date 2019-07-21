@@ -1,6 +1,7 @@
 <template>
   <div>
 
+    <!-- SHORT ROW -->
     <div class="row">
       <div class="col-3">
         <card type="chart" class="shorter-cards">	    
@@ -77,6 +78,7 @@
       </div>
     </div>
 
+    <!-- STREAM LINE -->
     <div class="row">
       <div class="col-12">
         <card type="chart">
@@ -760,7 +762,7 @@
         this.$refs.bigChart.updateGradients(chartData);
         this.bigLineChart.chartData = chartData;
         this.bigLineChart.activeIndex = index;
-      }
+      },
     },
     // async mounted () {
     //   this.loaded = false

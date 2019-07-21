@@ -21,6 +21,10 @@ export let bigLineChartOptions = {
   scales: {
     xAxes: [{
       type: 'realtime',
+      scaleLabel: {
+        display: true,
+        labelString: 'value'
+      },
       realtime: {
         duration: 20000,
         ttl: 60000,
@@ -68,13 +72,32 @@ export let bigLineChartOptions = {
       }
     }]
   },
+  tooltips: {
+    mode: 'nearest',
+    intersect: false
+  },
   hover: {
     mode: 'nearest',
     intersect: false
   },
-  plugins: {
-    streaming: {
-      frameRate: 30
+  pan: {
+    enabled: true,
+    mode: 'x',
+    rangeMax: {
+      x: 4000
+    },
+    rangeMin: {
+      x: 0
+    }
+  },
+  zoom: {
+    enabled: true,
+    mode: 'x',
+    rangeMax: {
+      x: 20000
+    },
+    rangeMin: {
+      x: 1000
     }
   }
 }

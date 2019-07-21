@@ -1,4 +1,5 @@
 import { Line, mixins } from 'vue-chartjs';
+import 'chartjs-plugin-zoom';
 import 'chartjs-plugin-streaming';
 
 export default {

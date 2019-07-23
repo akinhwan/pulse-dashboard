@@ -24,6 +24,7 @@
 
 ## Demo
 
+- Heroku Deployment (https://pulse-sfmc.herokuapp.com/#/dashboard)
 - [Youtube Screen Recording](https://youtu.be/e8UNirOMPsA)
 
 
